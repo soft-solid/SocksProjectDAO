@@ -1,14 +1,14 @@
 package org.courses.domain.jdbc;
 
-public class Column {
+public class ColumnClass {
     private String name;
     private Class type;
 
-    public Column() {
+    public ColumnClass() {
 
     }
 
-    public Column(String name, Class type) {
+    public ColumnClass(String name, Class type) {
         this.name = name;
         this.type = type;
     }

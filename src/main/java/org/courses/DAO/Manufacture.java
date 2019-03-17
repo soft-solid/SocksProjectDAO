@@ -2,22 +2,22 @@ package org.courses.DAO;
 
 import org.courses.domain.jdbc.BaseEntity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.sql.Connection;
-import javax.persistence.*;
 
-@Entity(name = "Type")
-public class Type extends BaseEntity {
-
+@Entity(name = "Manufacture")
+public class Manufacture extends BaseEntity {
     @Column(name = "id")
     private int id;
     @Column(name = "name")
     private String name;
 
-    public Type(Connection con) {
+    public Manufacture(Connection con) {
         super(con);
     }
 
-    public Type(String name, Connection con) {
+    public Manufacture(String name, Connection con) {
         super(con);
         this.name = name;
     }

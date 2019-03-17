@@ -4,7 +4,7 @@ import org.courses.domain.hbm.Manufacture;
 import org.courses.domain.hbm.Material;
 import org.courses.domain.hbm.Socks;
 import org.courses.domain.jdbc.BaseEntity;
-import org.courses.domain.jdbc.Column;
+import org.courses.domain.jdbc.ColumnClass;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -42,8 +42,8 @@ public abstract class AbstractQueryCommand {
         StringBuilder columns = new StringBuilder();
         StringBuilder values = new StringBuilder();
 
-        Collection<Column> definitions = entity.getColumns();
-        for (Column definition : definitions) {
+        Collection<ColumnClass> definitions = entity.getColumn();
+        for (ColumnClass definition : definitions) {
             if (columns.length() > 0)
                 columns.append(", ");
             columns.append(definition.getName());

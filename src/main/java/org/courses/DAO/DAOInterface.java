@@ -1,11 +1,16 @@
 package org.courses.DAO;
 
+import org.courses.domain.jdbc.BaseEntity;
+
 import java.sql.SQLException;
 import java.util.List;
 
 public interface DAOInterface {
-   void Save() throws SQLException, IllegalAccessException;
-   DAOInterface Read(int id) throws SQLException;
-   List<DAOInterface> ReadAll();
-   void Delete();
+    int Save() throws SQLException, IllegalAccessException;
+
+    BaseEntity Read(int id) throws SQLException;
+
+    List<DAOInterface> ReadAll();
+
+    void Delete(int id);
 }

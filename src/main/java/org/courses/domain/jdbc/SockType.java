@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.persistence.Column;
 
 @Entity(name = "Type")
-public class SockType extends BaseEntity {
+public class SockType  {
     @Column(name = "id")
     private int id;
 
